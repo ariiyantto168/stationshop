@@ -1,4 +1,4 @@
-<h1>New Products</h1>
+<h1>Products</h1>
         <?php foreach($products_data as $rows) { ?>
             <div class="product_box">
             	<a href="<?php echo base_url(); ?>productdetail/<?php echo $rows["product_id"]; ?>"><img src="<?php echo base_url(); ?>images/product/<?php echo $rows["gambar"]; ?>" alt="Image 01" /></a>
