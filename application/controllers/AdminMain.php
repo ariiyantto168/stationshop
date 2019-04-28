@@ -65,8 +65,8 @@
 
 				$sql="UPDATE product_tbl SET
 				product_name='" . $product_name . "',
-				price=" . $price . "',
-				stock=" . $stock . ",
+				price='" . $price . "',
+				stock='" . $stock . "',
 				brand='" . $brand ."',
 				gambar='" . $gambar . "' 
 				WHERE product_id=" . $product_id;
