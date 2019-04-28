@@ -24,7 +24,7 @@
                      <?php foreach($products_data as $rows) { ?>
 						<tr>
 							<td class="align-center"><?php echo $no; ?></td>
-                            <td><img src="<?php echo base_url(); ?>images/product/<?php echo $rows["gambar"]; ?>" /></td>
+                            <td><img src="<?php echo base_url(); ?>images/product/<?php echo $rows["gambar"]; ?>" width:70px; height:70px; /></td>
 							
 							<td><?php echo $rows["product_name"]; ?></td>
 							<td><?php echo $rows["price"]; ?></td>
