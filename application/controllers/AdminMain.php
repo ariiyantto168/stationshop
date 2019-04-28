@@ -44,6 +44,36 @@
 			$data["content_page"]="edit_form";
 			$data["data_product"]=$this->ProductsModel->getProductDetail($product_id);
 			$this->load->view("admin/admin_index",$data);
+		 }
 	 	}
+		
+		 public function editProductSubmit() {
+				$product_id=$_POST["product_id"];
+				$product_name=$_POST["product_name"];
+				$price=$_POST["stock"];
+				$brand=$_POST["brand"];
+				$product_description=$_POST["product_description"];
+				$gambar=$_POST["gambar_old"];
+				$gambar_old="./images/product/" . $_POST["gambar_old"];
+
+				if ($this->upload->do_upload("gambar")) {
+					$gambar=$this->upload->file_name;
+					if (file_exists($gambar_old)) {
+						unlink($gambar_old);
+					}
+				}
+
+				$sql="UPDATE product_tbl SET
+				product_name='" . $product_name . "',
+				price=" . $price . "',
+				stock=" . $stock . ",
+				brand='" . $brand ."',
+				gambar='" . $gambar . "' 
+				WHERE product_id=" . $product_id;
+
+				$query=$this->db->query($sql);
+
+				redirect(base_url() . "AdminMain");
+			}
 	 }
- }
+ 
