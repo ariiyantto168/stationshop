@@ -2,7 +2,7 @@
 <?php if(isset($data_product)) { ?>
               	    <h2>Edit Products</h2>
 				   <p>Edit Data Products on StationShop</p>
-                    <form action="" method="post" enctype="multipart/form-data">
+                    <form action="<?= base_url(); ?>AdminMain/editProductSubmit" method="post" enctype="multipart/form-data">
                     
                     <input type="hidden" name="product_id" value="<?= $data_product->product_id; ?>" />
                     
@@ -35,7 +35,7 @@
                     </div>
                     
                     <div class="element"> 
-                         <img src="" width="200" height="200"/>
+                         <img src="<?= base_url(); ?>images/product/<?= $data_product->gambar; ?>" width="200" height="200"/>
 					
                         <input type="hidden" name="gambar_old" value="<?= $data_product->gambar; ?>" />
                         <label for="gambar">Attachments</label>
