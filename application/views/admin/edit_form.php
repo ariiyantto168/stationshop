@@ -37,7 +37,7 @@
                     <div class="element"> 
                          <img src="" width="200" height="200"/>
 					
-                        <input type="hidden" name="gambar_old" value="" />
+                        <input type="hidden" name="gambar_old" value="<?= $data_product->gambar; ?>" />
                         <label for="gambar">Attachments</label>
 						<input type="file" name="gambar" id="gambar" />
 					</div>
