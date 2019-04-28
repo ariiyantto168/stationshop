@@ -39,8 +39,11 @@
 		  redirect(base_url() . "AdminMain");
 	 }
 	 
-	 public function editProduct($product_id) {
-		$data["content_page"]="edit_form";
-		$this->load->view("admin/admin_index",$data); 
+	 public function editProduct($product_id=0) {
+		 if ($product_id>0) {
+			$data["content_page"]="edit_form";
+			$data["data_product"]=$this->ProductsModel->getProductDetail($product_id);
+			$this->load->view("admin/admin_index",$data);
+	 	}
 	 }
  }
