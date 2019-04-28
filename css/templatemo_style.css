@@ -471,3 +471,28 @@ h6 {
 #templatemo_footer a {
 	color: #999; 
 }
+
+.pagination ul {
+	list-style-type: none;
+}
+
+.paging_item {
+	width: 30px;
+	height: 30px;
+	background-color: #1AC5F9;
+	text-align: center;
+	line-height: 30px;
+	margin-right: 10px;
+	float: left;
+}
+
+.paging_item a {
+	color: #ffffff;
+	font-weight: bold;
+}
+
+.paging_item:hover {
+	background-color: #FC3;
+}
+
+.paging_item_active {background-color: #ffb535;}

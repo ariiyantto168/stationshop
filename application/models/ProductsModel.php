@@ -24,4 +24,23 @@
 			$query = $this->db->query($sql);
 			return $query->row(); /*ini hanya menampilkan data satu*/
 		}
+
+		public function getTotalProducts() {
+			$sql="SELECT * FROM product_tbl";
+			$query=$this->db->query($sql);
+			return $query->num_rows();
+		}
+
+		public function getProductsPage($start=0,$limit=0) {
+
+			if ($limit>0) {
+
+				$sql="SELECT * FROM product_tbl ORDER BY product_id DESC LIMIT " . $start . "," . $limit;
+				$query=$this->db->query($sql);
+				return $query->result_array();
+			}
+			else {
+				return NULL;
+			}
+		}
 	}
