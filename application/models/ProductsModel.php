@@ -42,5 +42,18 @@
 			else {
 				return NULL;
 			}
+			
+		}
+
+		public function getGambarProduct($product_id=0)
+		{
+			$result ="";
+			if($product_id>0) {
+			$sql = "SELECT gambar FROM product_tbl WHERE product_id=" . $product_id;
+			$query=$this->db->query($sql);
+			$rows=$query->row();
+			$result=$rows->gambar;
+			}
+			return $result;
 		}
 	}

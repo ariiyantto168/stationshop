@@ -75,5 +75,19 @@
 
 				redirect(base_url() . "AdminMain");
 			}
+
+			public function deleteProduct($product_id) {
+				$gambar=$this->ProductsModel->getGambarProduct($product_id);
+				$gambar="./images/product/" . $gambar;
+
+				if (file_exists($gambar)) {
+					unlink($gambar);
+
+					$sql="DELETE FROM product_tbl WHERE product_id=" . $product_id;
+					$query=$this->db->query($sql);
+
+					redirect(base_url() . "AdminMain");
+				}
+			}
 	 }
  

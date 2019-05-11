@@ -32,7 +32,7 @@
 							<td>
 								<a href="<?php echo base_url(); ?>AdminMain/editProduct/<?php echo $rows["product_id"]; ?>" class="table-icon edit" title="Edit"></a>
 								<a href="#" class="table-icon archive" title=" View Comment"></a>
-								<a href="<?php echo base_url(); ?>AdminMain/deleteProduct/<?php echo $rows["product_id"]; ?>" class="table-icon delete" title="Delete" onclick="return confirm('apakah anda yakin data ber id=<?php //ubah ?> ingin dihapus ?') "></a>
+								<a onclick="javascript: return confirm('are you sure delete this data');" href="<?php echo base_url(); ?>AdminMain/deleteProduct/<?php echo $rows["product_id"]; ?>" class="table-icon delete" title="Delete" onclick="return confirm('apakah anda yakin data ber id=<?php //ubah ?> ingin dihapus ?') "></a>
 							</td>
 						</tr>
                         <?php $no++; ?>
